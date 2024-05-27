@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPattern": "/currentUser\\?[a-z]*=[A-Z,a-z]+"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "uuid": "{{randomValue type='UUID'}}",
+      "name": "{{request.query.name}}",
+      "lastName": "Ageev",
+      "secondName": "Andreevich"
+    },
+    "transformers": [
+      "response-template"
+    ],
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
